@@ -1,0 +1,209 @@
+html, body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+  font-size: 30px;
+}
+
+.nav-link {
+  width: 130px;
+}
+
+@font-face {
+  font-family: FontAwesome;
+  src: url(css/FontAwesome.otf);
+}
+
+#searchinput {
+  display: none;
+  width: 300px;
+  border: none;
+}
+
+#searchinput:focus {
+  outline: none;
+}
+
+/* Bredcrumbs css */
+
+ul.breadcrumb {
+    padding: 10px 25px;
+    list-style: none;
+    background-color: white;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 28px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+/* Lines CSS */
+
+.hr1 {
+  color: gray;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.hr2 {
+  color: gray;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* Upload button */
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.upload-btn-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+/* Product carousel */
+
+.carousel-control-prev-icon {
+  background-color: black;
+}
+
+.carousel-control-next-icon {
+  background-color: black;
+}
+
+.select {
+  margin-left: 25px;
+  margin-right:25px;
+}
+
+.carouseltitle {
+  top: 22vw;
+}
+.carousel-caption h1 {
+  background-color: rgb(255,255,255,0.5);
+  color: black;
+  font-size: 6vw;
+  font-weight: lighter;
+}
+
+.carousel-caption h2 {
+  font-size: 2vw;
+  font-weight: lighter;
+}
+.carousel-caption h5 {
+  font-size: 1vw;
+  font-weight: lighter;
+}
+
+.thumbnail img {
+  max-width: 100%;
+}
+
+.figure {
+  margin: 10%;
+}
+
+figcaption {
+  margin: 10px;
+}
+
+.caption {
+  position: absolute;
+  top: 10vw;
+  left: 0;
+  background-color: rgb(255,255,255,0.5);
+  color: black;
+  width: 100%;
+  font-size: 15px;
+}
+
+.button button {
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: lighter;
+  width: 90px;
+  height: 50px;
+}
+
+.footerbutton button {
+  background-color: black;
+  color: white;
+  border: none;
+  font-weight: lighter;
+  height: 50px;
+  padding-top: 5px;
+  margin-left: 150px;
+  width: 100%;
+  top: 1000vw;
+}
+
+
+
+.img-title{
+  position: absolute;;
+  color: #fff;
+  left: 0;
+  right: 0;
+  top: 10%;
+  letter-spacing: 3px;
+}
+
+.bottom-feature {
+  background-image: url("images/feature5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 80vw;
+}
+
+footer a {
+  color: black;
+
+}
+
+.hh {
+  padding-top: 40%;
+}
+
+.thumbnail a > img {
+  height: 261px;
+  width: 394px;
+  border: none;
+}
+
+/* Rating stars */
+
+.checked {
+  color: orange;
+}
