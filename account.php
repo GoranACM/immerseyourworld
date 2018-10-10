@@ -13,22 +13,14 @@ if ($isloggedin) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <?php if ($isloggedin): ?>
-      <p>Welcome back, <?php echo $username . " - " . $email; ?></p>
 
-      <a href="shop.php">Let's get shopping!</a>
-      <a href="logout.php">Log out.</a>
-      <?php else: ?>
-      <p>Sorry you must be logged in!</p>
-      <a href="index.html">Back to home</a>
+<?php if ($isloggedin): ?>
+  <p>Welcome back, <?php echo $username . " - " . $email; ?></p>
 
-    <?php endif; ?>
-  </body>
-</html>
+  <a href="shop.php">Let's get shopping!</a>
+  <a href="logout.php">Log out.</a>
+  <?php else: ?>
+  <p>Sorry you must be logged in!</p>
+  <a href="index.php">Back to home</a>
+
+<?php endif; ?>

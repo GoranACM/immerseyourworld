@@ -15,6 +15,16 @@ nav {
 
 .nav-link {
   width: 130px;
+  padding: 1.5rem 1rem;
+}
+
+.dropdown-menu {
+  border: none;
+}
+
+#btnEmpty {
+  padding-right: 15px;
+  padding-top: 4px;
 }
 
 @font-face {
@@ -22,14 +32,48 @@ nav {
   src: url(css/FontAwesome.otf);
 }
 
+.navbar-brand {
+  width: 1000px;
+}
+
+/* Search */
+
 #searchinput {
   display: none;
   width: 300px;
   border: none;
+  padding-top: 22px;
 }
 
 #searchinput:focus {
   outline: none;
+}
+
+.search__container {
+  display: flex;
+  position: relative;
+}
+
+.search__results {
+  position: absolute;
+  top: 60px;
+  z-index: 11;
+  width: 100%;
+}
+
+.searchHint {
+  padding: 20px;
+  display: block;
+  background-color: white;
+  font-size: 20px;
+  color: #353A40;
+  font-family: FontAwesome;
+}
+
+.searchHint:hover {
+  background-color: #353A40;
+  color: white;
+  text-decoration: none;
 }
 
 /* Bredcrumbs css */
@@ -166,8 +210,6 @@ figcaption {
   width: 100%;
   top: 1000vw;
 }
-
-
 
 .img-title{
   position: absolute;;

@@ -9,17 +9,14 @@ $validpassword = isset($_POST['lg_password']) && !empty($_POST['lg_password']);
 // If inputs are correct
 if ($validpassword && $validusername) {
 
-  $servername = "localhost";
-  $username = "id6957991_g0r4nm1k3rud0lf0";
-  $password = "!mm3r53YW";
-  $dbname = "id6957991_immerseyourworld";
+  include 'serverCreds.php';
 
   // Create a connection
   $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+      die("Connection failed: " . $conn->connect_error);
+    }
 
   $userpass = $_POST['lg_password'];
   $useruser = $_POST['lg_username'];
