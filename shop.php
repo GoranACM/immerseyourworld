@@ -14,6 +14,7 @@
 
 <?php
 
+
 include 'serverCreds.php';
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -39,6 +40,32 @@ $sql  = "SELECT * FROM Products, Category WHERE Products.CategoryID=Category.Cat
     }
 ?>
 
+<!--  JQUERY FOR CATEGORIES NOT WORKING linking to fetchategories.php
+<script>
+$(document).ready(function()
+{
+  $("#fetchcat").on('change',function()
+  {
+    var value = $(this).val();
+    $.ajax(
+      {
+          url:'fetchcategories.php',
+          type:'POST',
+          data:'request='+value,
+          beforeSend:function()
+          {
+            $("#product-results").html('Working on...'); // product results- div id not added
+          },
+          success:function(data)
+          {
+            $("#product-results").html(data);
+          },
+
+      });
+    });
+  });
+</script>
+ -->
 
 <!-- Body Start -->
 
@@ -49,14 +76,16 @@ $sql  = "SELECT * FROM Products, Category WHERE Products.CategoryID=Category.Cat
   <li>Shop</li>
 </ul>
 
+<!-- <div id="product-results"> PART OF JQUERY FOR CATEGORIES NOT WORKING -->
 <!-- Category -->
 <div class="category d-flex flex-row-reverse mr-4 mb-3">
   <p>Sort by:
-      <select class="btn btn-outline-dark" name="category">
+      <select class="btn btn-outline-dark" name="category" id="fetchcat" name="fetchby">
+        <!-- <option value="0">All</option>  MIKE ADD !!!!!!!!! -->
         <option value="1">Headsets</option>
         <option value="2">Cameras</option>
         <option value="3">Drones</option>
-        <option value="4">Accesories</option>
+        <option value="4">Accessories</option>
       </select>
   </p>
 </div>
@@ -165,11 +194,15 @@ while($row = mysqli_fetch_assoc($result)) {
       </form>
     </div>
   </div>
+
   <?php
     }
   }
     ?>
 </div>
+</div>
+
+
   <!-- Footer -->
   <?php include 'footer.php'; ?>
 
